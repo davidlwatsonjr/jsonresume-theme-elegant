@@ -52,17 +52,26 @@ The profiles are shown in the order in which they are specified in the `basics.p
 
 ### Contributing
 ```
-$ npm install -g grunt
 $ git clone https://github.com/mudassir0909/jsonresume-theme-elegant.git
 $ cd jsonresume-theme-elegant
 $ npm install
-$ grunt watch // watches for less file changes
-$ grunt exec:run_server // Do this in a new terminal tab to run node server
+$ npm start
 ```
 
 Visit [http://localhost:8888](http://localhost:8888) to see the theme in action.
 
 [![Throughput Graph](https://graphs.waffle.io/mudassir0909/jsonresume-theme-elegant/throughput.svg)](https://waffle.io/mudassir0909/jsonresume-theme-elegant/metrics)
+
+#### Building
+After making changes, you'll want to build.
+```
+$ npm run build
+```
+
+Or, to initiate a watch that automatically builds as you develop:
+```
+$ npm run watch
+```
 
 ##### Testing JSON changes
 You can test your changes by updating `resume.json` file inside `node_modules/resume-schema/` folder. You might want to rerun `grunt exec:run_server` whenever you make any changes to `resume.json`
